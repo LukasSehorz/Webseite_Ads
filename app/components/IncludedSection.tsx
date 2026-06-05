@@ -29,6 +29,7 @@ const FEATURES: Feature[] = [
 export default function IncludedSection() {
   return (
     <section
+      id="leistungen-details"
       className="relative w-full overflow-hidden py-24 md:py-32"
       style={{
         background:

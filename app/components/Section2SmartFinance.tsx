@@ -14,8 +14,9 @@ const BENEFITS = [
 export default function Section2SmartFinance() {
   return (
     <section>
+      {/* ===================== DESKTOP (unverändert) ===================== */}
       <div
-        className="slide aspect-[1568/865]"
+        className="slide hidden aspect-[1568/865] sm:block"
         style={{
           background: "radial-gradient(70% 84% at 60% 17%, #aebfd2 0%, #5f80a6 24%, #2f4f74 56%, #1b3a5c 86%)",
           borderRadius: 0,
@@ -130,6 +131,101 @@ export default function Section2SmartFinance() {
 
         {/* Durchlaufendes Buzzword-Banner – liegt im Bild auf dem Schreibtisch */}
         <div className="absolute inset-x-0 bottom-[2.5%] z-10">
+          <BuzzwordMarquee />
+        </div>
+      </div>
+
+      {/* ===================== MOBILE (gestapelt) ===================== */}
+      <div className="relative overflow-hidden bg-[#060910] sm:hidden">
+        {/* Kopf-Band: dezenter blauer Glow hinter Headline + Subline (kein Foto) */}
+        <div className="relative px-6 pb-11 pt-24">
+          {/* Naht oben: weicher Übergang aus dem Hero (#0a1726) */}
+          <div
+            className="pointer-events-none absolute inset-0"
+            style={{
+              background:
+                "linear-gradient(180deg, #0a1726 0%, rgba(10,23,38,.5) 9%, transparent 28%)",
+            }}
+          />
+          {/* Dezenter blauer Radial-Glow */}
+          <div
+            className="pointer-events-none absolute inset-0"
+            style={{
+              background:
+                "radial-gradient(68% 52% at 50% 40%, rgba(70,134,183,.32), rgba(70,134,183,.10) 46%, transparent 72%)",
+            }}
+          />
+
+          {/* Headline + Subline */}
+          <div className="relative z-10">
+            <h1 className="text-center text-[32px] font-semibold leading-[1.08] tracking-tight text-white">
+              Webdesign-Agentur
+            </h1>
+            <h2 className="mx-auto mt-4 max-w-[320px] text-center text-[17px] font-medium leading-[1.4] tracking-tight text-white/45">
+              Modernes Webdesign für mehr Sichtbarkeit, Anfragen &amp; Wachstum
+            </h2>
+          </div>
+        </div>
+
+        {/* Inhalt auf solidem Hintergrund */}
+        <div className="relative z-10 px-6">
+          {/* Stats / Benefits glass card – heller Frosted-Glass-Look wie Desktop */}
+          <div
+            className="rounded-[24px] border border-white/20 p-6 shadow-[0_24px_60px_rgba(0,0,0,.5),0_0_55px_rgba(70,134,183,.22)] ring-1 ring-white/10 backdrop-blur-md"
+            style={{ background: "linear-gradient(180deg, rgba(255,255,255,.17), rgba(255,255,255,.07))" }}
+          >
+            <div
+              className="text-[40px] font-semibold leading-none tracking-tight"
+              style={{
+                backgroundImage: "linear-gradient(180deg,#ffffff,#aacdf0)",
+                WebkitBackgroundClip: "text",
+                backgroundClip: "text",
+                color: "transparent",
+              }}
+            >
+              +40
+            </div>
+            <p className="mt-2 text-[15px] font-medium text-white/70">umgesetzte Projekte</p>
+
+            <div className="my-4 h-px w-full bg-white/10" />
+
+            <ul className="space-y-4">
+              {BENEFITS.map((b) => (
+                <li key={b} className="flex items-start gap-3.5">
+                  <span className="mt-0.5 flex h-[25px] w-[25px] flex-none items-center justify-center rounded-full bg-[#88C1ED]/15 text-[#88C1ED]">
+                    <IconCheck className="h-4 w-4" />
+                  </span>
+                  <span className="text-[16px] leading-snug text-white/80">{b}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* CTAs */}
+          <div className="mt-7 flex flex-col gap-3">
+            <a
+              href="#kontakt"
+              className="inline-flex w-full items-center justify-center gap-2.5 rounded-full bg-[#4686B7] px-8 py-4 text-[16px] font-semibold text-white shadow-[0_0_30px_rgba(70,134,183,.35)] transition-all duration-200 hover:bg-[#5a9acc] active:scale-95"
+            >
+              Erstgespräch vereinbaren
+              <svg width="18" height="18" viewBox="0 0 16 16" fill="none">
+                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </a>
+            <a
+              href="tel:+491723465896"
+              className="inline-flex w-full items-center justify-center gap-2.5 rounded-full border border-white/20 bg-white/[0.06] px-8 py-4 text-[16px] font-medium text-white/90 backdrop-blur-sm transition-all duration-200 hover:border-white/35 hover:bg-white/[0.1] hover:text-white active:scale-95"
+            >
+              <svg width="18" height="18" viewBox="0 0 16 16" fill="none">
+                <path d="M2 3.5A1.5 1.5 0 013.5 2h.879a1 1 0 01.95.685l.826 2.479a1 1 0 01-.23 1.032L4.5 7.5c.974 1.628 2.372 3.026 4 4l1.304-1.425a1 1 0 011.032-.23l2.479.826A1 1 0 0114 11.621V12.5A1.5 1.5 0 0112.5 14C6.701 14 2 9.299 2 3.5z" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+              Jetzt anrufen
+            </a>
+          </div>
+        </div>
+
+        {/* Durchlaufende Zeile */}
+        <div className="relative z-10 mt-10 pb-7">
           <BuzzwordMarquee />
         </div>
       </div>

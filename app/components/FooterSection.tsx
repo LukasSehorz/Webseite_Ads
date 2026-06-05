@@ -21,15 +21,6 @@ const SERVICES = [
   { label: "Webdesign für Agenturen", href: "#kontakt" },
 ];
 
-function IconLinkedIn() {
-  return (
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-      <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z" />
-      <circle cx="4" cy="4" r="2" />
-    </svg>
-  );
-}
-
 function IconInstagram() {
   return (
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
@@ -82,14 +73,9 @@ export default function FooterSection() {
 
             <div className="mt-6 flex gap-3">
               <a
-                href="#"
-                className="flex h-9 w-9 items-center justify-center rounded-xl border border-white/10 bg-white/[0.04] text-white/45 transition-all duration-200 hover:border-white/20 hover:bg-white/[0.08] hover:text-white/80"
-                aria-label="LinkedIn"
-              >
-                <IconLinkedIn />
-              </a>
-              <a
-                href="#"
+                href="https://www.instagram.com/flowstate_ai_solutions/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex h-9 w-9 items-center justify-center rounded-xl border border-white/10 bg-white/[0.04] text-white/45 transition-all duration-200 hover:border-white/20 hover:bg-white/[0.08] hover:text-white/80"
                 aria-label="Instagram"
               >
@@ -147,17 +133,27 @@ export default function FooterSection() {
               Kontakt
             </h3>
             <ul className="space-y-4">
-              <li className="flex items-center gap-3 text-[14px] text-white/55">
-                <svg width="15" height="15" viewBox="0 0 16 16" fill="none" className="flex-none text-white/30">
-                  <path d="M2 4l6 4.5L14 4M2 3h12a1 1 0 011 1v8a1 1 0 01-1 1H2a1 1 0 01-1-1V4a1 1 0 011-1z" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" />
-                </svg>
-                Lukas.sehorz@flowstate-ai.net
+              <li>
+                <a
+                  href="mailto:Lukas.sehorz@flowstate-ai.net"
+                  className="flex items-center gap-3 text-[14px] text-white/55 transition-colors duration-150 hover:text-white/90"
+                >
+                  <svg width="15" height="15" viewBox="0 0 16 16" fill="none" className="flex-none text-white/30">
+                    <path d="M2 4l6 4.5L14 4M2 3h12a1 1 0 011 1v8a1 1 0 01-1 1H2a1 1 0 01-1-1V4a1 1 0 011-1z" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" />
+                  </svg>
+                  Lukas.sehorz@flowstate-ai.net
+                </a>
               </li>
-              <li className="flex items-center gap-3 text-[14px] text-white/55">
-                <svg width="15" height="15" viewBox="0 0 16 16" fill="none" className="flex-none text-white/30">
-                  <path d="M2 3.5A1.5 1.5 0 013.5 2h.879a1 1 0 01.95.685l.826 2.479a1 1 0 01-.23 1.032L4.5 7.5c.974 1.628 2.372 3.026 4 4l1.304-1.425a1 1 0 011.032-.23l2.479.826A1 1 0 0114 11.621V12.5A1.5 1.5 0 0112.5 14C6.701 14 2 9.299 2 3.5z" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-                0172 3465896
+              <li>
+                <a
+                  href="tel:+491723465896"
+                  className="flex items-center gap-3 text-[14px] text-white/55 transition-colors duration-150 hover:text-white/90"
+                >
+                  <svg width="15" height="15" viewBox="0 0 16 16" fill="none" className="flex-none text-white/30">
+                    <path d="M2 3.5A1.5 1.5 0 013.5 2h.879a1 1 0 01.95.685l.826 2.479a1 1 0 01-.23 1.032L4.5 7.5c.974 1.628 2.372 3.026 4 4l1.304-1.425a1 1 0 011.032-.23l2.479.826A1 1 0 0114 11.621V12.5A1.5 1.5 0 0112.5 14C6.701 14 2 9.299 2 3.5z" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                  0172 3465896
+                </a>
               </li>
               <li className="flex items-center gap-3 text-[14px] text-white/55">
                 <svg width="15" height="15" viewBox="0 0 16 16" fill="none" className="flex-none text-white/30">
@@ -191,7 +187,7 @@ export default function FooterSection() {
       <div className="pointer-events-none h-px bg-gradient-to-r from-transparent via-white/[0.07] to-transparent" />
       <div className="relative z-10 mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-4 px-6 py-5">
         <p className="text-[13px] text-white/25">
-          © 2025 Flowstate AI Solutions. Alle Rechte vorbehalten.
+          © 2026 Flowstate AI Solutions. Alle Rechte vorbehalten.
         </p>
         <div className="flex gap-6">
           <Link href="/impressum" className="text-[13px] text-white/30 transition-colors hover:text-white/60">Impressum</Link>

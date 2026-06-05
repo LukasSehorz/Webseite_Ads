@@ -46,27 +46,39 @@ export function ArrowButton({
   label,
   light = false,
   className = "",
+  href,
 }: {
   label: string;
   light?: boolean;
   className?: string;
+  href?: string;
 }) {
-  return (
-    <button
-      className={`group inline-flex items-center gap-5 rounded-full py-2 pl-7 pr-2 text-[16px] text-white transition-colors ${
-        light
-          ? "border border-white/15 bg-white/10 backdrop-blur-md hover:bg-white/15"
-          : "bg-[#13191f] hover:bg-[#1c252e]"
-      } ${className}`}
-    >
+  const classes = `group inline-flex items-center gap-5 rounded-full py-2 pl-7 pr-2 text-[16px] text-white transition-colors ${
+    light
+      ? "border border-white/15 bg-white/10 backdrop-blur-md hover:bg-white/15"
+      : "bg-[#13191f] hover:bg-[#1c252e]"
+  } ${className}`;
+
+  const inner = (
+    <>
       {label}
       <span className="circle-arrow transition-transform group-hover:translate-x-0.5">
         <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth={2.2} strokeLinecap="round" strokeLinejoin="round">
           <path d="M9 6l6 6-6 6" />
         </svg>
       </span>
-    </button>
+    </>
   );
+
+  if (href) {
+    return (
+      <a href={href} className={classes}>
+        {inner}
+      </a>
+    );
+  }
+
+  return <button className={classes}>{inner}</button>;
 }
 
 /* 4-point sparkle marker */

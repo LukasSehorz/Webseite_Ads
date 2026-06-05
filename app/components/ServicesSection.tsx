@@ -86,7 +86,7 @@ export default function ServicesSection() {
 
         {/* CTA */}
         <div className="mt-14 flex justify-center">
-          <ArrowButton label="Alle Webdesign-Leistungen ansehen" light />
+          <ArrowButton label="Alle Webdesign-Leistungen ansehen" light href="#leistungen-details" />
         </div>
       </div>
 

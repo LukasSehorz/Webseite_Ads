@@ -1,4 +1,3 @@
-
 export default function HeroPortrait() {
   return (
     <section className="relative min-h-screen w-full overflow-hidden bg-[#0a1726]">
@@ -63,11 +62,14 @@ export default function HeroPortrait() {
       <div className="grain-overlay z-[7]" />
 
       {/* centered logo + CTA — stands between the two portraits */}
-      <div className="absolute left-1/2 top-[52%] z-10 flex -translate-x-1/2 -translate-y-1/2 flex-col items-center gap-9 text-white">
-        <span className="text-[58px] font-normal tracking-tight">Flowstate AI</span>
+      <div className="absolute left-1/2 top-[52%] z-10 flex -translate-x-1/2 -translate-y-1/2 flex-col items-center gap-[46vh] text-white sm:gap-9">
+        <span className="flex w-max items-center gap-2 whitespace-nowrap text-[36px] font-normal tracking-tight sm:text-[58px]">
+          <img src="/f-mark.png" alt="" aria-hidden className="h-[42px] w-auto sm:hidden" />
+          Flowstate AI
+        </span>
         <a
           href="#kontakt"
-          className="group inline-flex items-center gap-3 rounded-full bg-[#4686B7] px-8 py-4 text-[17px] font-semibold text-white shadow-[0_0_32px_rgba(70,134,183,.5)] transition-all duration-200 hover:bg-[#5a9acc] hover:shadow-[0_0_44px_rgba(70,134,183,.65)] active:scale-95"
+          className="group inline-flex items-center gap-2 rounded-full bg-[#4686B7] px-6 py-3 text-[15px] font-semibold text-white shadow-[0_0_32px_rgba(70,134,183,.5)] transition-all duration-200 hover:bg-[#5a9acc] hover:shadow-[0_0_44px_rgba(70,134,183,.65)] active:scale-95 sm:gap-3 sm:px-8 sm:py-4 sm:text-[17px]"
         >
           Kostenlose Analyse sichern
           <svg width="18" height="18" viewBox="0 0 16 16" fill="none" className="transition-transform duration-200 group-hover:translate-x-0.5">
@@ -77,9 +79,10 @@ export default function HeroPortrait() {
       </div>
 
       {/* bottom caption — centered */}
-      <div className="absolute inset-x-0 bottom-[8%] z-10 mx-auto max-w-[640px] px-12">
-        <p className="text-center text-[14px] leading-relaxed text-[#aebccf]">
-          Plane, gestalte und skaliere deinen Online-Auftritt mit<br />
+      <div className="absolute inset-x-0 bottom-[9%] z-10 mx-auto max-w-[640px] px-4 sm:bottom-[8%] sm:px-12">
+        <p className="text-center text-[12px] leading-relaxed text-[#aebccf] sm:text-[14px]">
+          Plane, gestalte und skaliere deinen Online-Auftritt mit{" "}
+          <br className="hidden sm:block" />
           datenbasierten Entscheidungen und langfristiger Vision.
         </p>
       </div>

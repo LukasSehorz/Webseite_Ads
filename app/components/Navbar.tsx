@@ -36,11 +36,9 @@ export default function Navbar() {
         {/* Logo */}
         <a href="#" className="flex items-center gap-2.5 text-white no-underline">
           <img
-            src="/logo.png"
+            src="/f-mark.png"
             alt="Flowstate AI Logo"
-            width={36}
-            height={36}
-            className="h-9 w-9 rounded-md"
+            className="h-9 w-auto"
           />
         </a>
 

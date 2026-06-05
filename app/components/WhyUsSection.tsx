@@ -23,9 +23,32 @@ export default function WhyUsSection() {
       <div className="relative z-10 mx-auto grid max-w-6xl items-center gap-14 px-6 lg:grid-cols-2 lg:gap-20">
         {/* Left: copy + checklist */}
         <div>
-          <h2 className="text-4xl font-medium leading-tight tracking-tight text-white md:text-5xl">
-            Webdesign-Agentur –<br />Warum mit uns arbeiten?
-          </h2>
+          {/* Headline – auf Mobil mit Bild-Hintergrund (full-bleed) */}
+          <div className="relative -mx-6 overflow-hidden px-6 py-14 sm:mx-0 sm:overflow-visible sm:py-0">
+            {/* Bild-Hintergrund nur Mobil */}
+            <div
+              className="absolute inset-0 sm:hidden"
+              style={{
+                backgroundImage: "url('/atm-bg.png')",
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+              }}
+            />
+            {/* Overlay für Lesbarkeit + weiche Kanten oben/unten, nur Mobil */}
+            <div
+              className="absolute inset-0 sm:hidden"
+              style={{
+                background:
+                  "linear-gradient(180deg, #060910 0%, rgba(6,9,16,.32) 24%, rgba(6,9,16,.32) 68%, #060910 100%)",
+              }}
+            />
+            {/* Transparenter Glas-Kasten um die Headline (nur Mobil) */}
+            <div className="relative z-10 rounded-[28px] border border-white/15 bg-white/[0.07] px-6 py-8 shadow-[0_20px_50px_rgba(0,0,0,.35)] ring-1 ring-white/10 backdrop-blur-md sm:rounded-none sm:border-0 sm:bg-transparent sm:p-0 sm:shadow-none sm:ring-0 sm:backdrop-blur-none">
+              <h2 className="text-center text-[30px] font-medium leading-tight tracking-tight text-white sm:text-left sm:text-4xl md:text-5xl">
+                Webdesign-Agentur –<br />Warum mit uns arbeiten?
+              </h2>
+            </div>
+          </div>
           <p className="mt-6 max-w-xl text-[16px] leading-relaxed text-white/50">
             Als unabhängige Webdesign-Agentur setzen wir auf direkten Kontakt statt
             Agentur-Overhead – feste Ansprechpartner, Ergebnisse die zählen.
@@ -41,12 +64,12 @@ export default function WhyUsSection() {
           </ul>
 
           <div className="mt-12">
-            <ArrowButton label="Kostenloses Erstgespräch" />
+            <ArrowButton label="Kostenloses Erstgespräch" href="#kontakt" />
           </div>
         </div>
 
-        {/* Right: workstation image */}
-        <div className="relative">
+        {/* Right: workstation image (auf Mobil ausgeblendet – liegt dort hinter der Headline) */}
+        <div className="relative max-sm:hidden">
           <div
             className="aspect-[3/4] w-full rounded-3xl border border-white/10 bg-cover bg-center shadow-[0_40px_100px_rgba(0,0,0,.55)] ring-1 ring-white/5"
             style={{ backgroundImage: "url('/atm-bg.png')" }}

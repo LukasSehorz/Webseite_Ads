@@ -78,6 +78,14 @@ export default function ReferencesScatter() {
         </div>
       </div>
 
+      {/* Hinweis (nur mobil): Karten sind anklickbar */}
+      <p className="relative z-10 mx-auto mt-4 flex max-w-sm items-center justify-center gap-2 px-6 text-center text-[13px] leading-relaxed text-white/55 sm:hidden">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" className="flex-none text-[#88C1ED]" aria-hidden>
+          <path d="M9 11V6a1.5 1.5 0 0 1 3 0v5m0-1.5a1.5 1.5 0 0 1 3 0V11m0-1a1.5 1.5 0 0 1 3 0v4.5a5 5 0 0 1-5 5h-1.6a4 4 0 0 1-2.9-1.25l-3-3.2a1.5 1.5 0 0 1 2.2-2L9 14" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+        Tippe auf eine Referenz, um die komplette Website zu sehen.
+      </p>
+
       {/* Film-/Pixel-Grain (Cohesion zum Hero) */}
       <div className="grain-overlay" style={{ opacity: 0.22 }} />
     </section>
