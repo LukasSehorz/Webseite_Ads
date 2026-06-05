@@ -35,18 +35,13 @@ export default function Navbar() {
       <nav className="mx-auto flex max-w-[1320px] items-center justify-between px-6 py-4 md:px-10">
         {/* Logo */}
         <a href="#" className="flex items-center gap-2.5 text-white no-underline">
-          <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
-            <rect width="28" height="28" rx="7" fill="url(#logo-grad)" />
-            <path d="M8 14.5L12.5 10L17 14.5L21 11" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-            <path d="M8 18L12.5 13.5L17 18" stroke="rgba(255,255,255,.5)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-            <defs>
-              <linearGradient id="logo-grad" x1="0" y1="0" x2="28" y2="28" gradientUnits="userSpaceOnUse">
-                <stop stopColor="#4686B7"/>
-                <stop offset="1" stopColor="#1d3a58"/>
-              </linearGradient>
-            </defs>
-          </svg>
-          <span className="text-[17px] font-semibold tracking-tight">Flowstate AI</span>
+          <img
+            src="/logo.png"
+            alt="Flowstate AI Logo"
+            width={36}
+            height={36}
+            className="h-9 w-9 rounded-md"
+          />
         </a>
 
         {/* Desktop links */}

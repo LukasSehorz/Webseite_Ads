@@ -8,7 +8,7 @@ import { AnimatePresence, motion } from "framer-motion";
 /*  In .env.local setzen: NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY=dein-key    */
 /*  Key holen: https://web3forms.com  (Mail: lukas.sehorz@flowstate-ai.net) */
 /* ------------------------------------------------------------------ */
-const ACCESS_KEY = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY ?? "";
+const ACCESS_KEY = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY ?? "d0501ce9-21ac-4dc8-a07d-fb15d95832e9";
 
 const STEPS = ["Kontaktdaten", "Ihr Unternehmen & Ziele", "Projektdetails"];
 
@@ -325,7 +325,12 @@ export default function ContactForm() {
       if (json.success) {
         setSuccess(true);
       } else {
-        setError("Es gab ein Problem beim Senden. Bitte versuchen Sie es erneut.");
+        // echte API-Meldung anzeigen (z.B. ungültiger Access-Key) statt generischer Text
+        setError(
+          json.message
+            ? `Senden fehlgeschlagen: ${json.message}`
+            : "Es gab ein Problem beim Senden. Bitte versuchen Sie es erneut."
+        );
       }
     } catch {
       setError("Verbindungsfehler. Bitte versuchen Sie es erneut.");
