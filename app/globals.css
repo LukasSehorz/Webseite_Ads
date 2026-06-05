@@ -1,26 +1,164 @@
 @import "tailwindcss";
 
+/* ============================================================= */
+/*  Lunetra — Design Tokens                                       */
+/* ============================================================= */
+@theme {
+  --color-ink: #eef3fb;
+  --color-muted: #93a4bb;
+  --color-faint: #5c6e86;
+  --color-blue: #6ea2e0;
+  --color-blue-soft: #aac8ec;
+  --color-slide: #05080e;
+
+  --font-sans: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+
+  --animate-dot-pulse: dotPulse 2.6s ease-in-out infinite;
+  --animate-twinkle: twinkle 4s ease-in-out infinite;
+  --animate-float: floatY 6s ease-in-out infinite;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #05080e;
+  --foreground: #eef3fb;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+* { box-sizing: border-box; }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+html { scroll-behavior: smooth; }
 
 body {
-  background: var(--background);
+  background: #05080e;
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* ============================================================= */
+/*  Reusable building blocks                                      */
+/* ============================================================= */
+
+/* Outer blue gradient frame around each slide */
+.slide-frame {
+  background:
+    radial-gradient(130% 110% at 50% 45%, #5a90cc 0%, #2b5b95 26%, #11314f 55%, #060b14 100%);
+  padding: clamp(20px, 3.2vw, 48px);
+}
+
+/* Inner rounded slide card */
+.slide {
+  position: relative;
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 40px 120px rgba(0, 0, 0, .55);
+}
+
+/* Dark glass pill (label chip with leading dot) */
+.glass-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 13px 22px 13px 16px;
+  border-radius: 40px;
+  background: linear-gradient(180deg, rgba(28, 36, 46, .82), rgba(14, 19, 26, .82));
+  border: 1px solid rgba(255, 255, 255, .08);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .35), inset 0 1px 0 rgba(255, 255, 255, .06);
+  color: #eef3fb;
+  font-size: 15px;
+  white-space: nowrap;
+}
+.glass-pill .dot {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 0 8px rgba(255, 255, 255, .55);
+  flex: none;
+}
+
+/* Light translucent pill variant (section 2 button) */
+.glass-pill--light {
+  background: linear-gradient(180deg, rgba(20, 28, 40, .55), rgba(12, 18, 28, .5));
+  border-color: rgba(255, 255, 255, .14);
+}
+
+/* Circle arrow button (Start / View platform) */
+.circle-arrow {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: #fff;
+  color: #11181f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+}
+
+/* Placeholder badge for not-yet-generated images */
+.img-badge {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  color: rgba(255, 255, 255, .5);
+  background: rgba(0, 0, 0, .4);
+  border: 1px dashed rgba(255, 255, 255, .25);
+  padding: 3px 6px;
+  border-radius: 3px;
+  pointer-events: none;
+}
+
+/* Film / pixel grain overlay (the noise texture from the reference) */
+.grain-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.4;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 140px 140px;
+  image-rendering: pixelated;
+}
+
+/* 4-point sparkle / crosshair marker */
+.spark {
+  position: relative;
+  width: 22px;
+  height: 22px;
+  flex: none;
+}
+.spark::before,
+.spark::after {
+  content: "";
+  position: absolute;
+  background: rgba(220, 233, 250, .9);
+  box-shadow: 0 0 6px rgba(170, 200, 236, .8);
+}
+.spark::before { left: 50%; top: 0; width: 1.5px; height: 100%; transform: translateX(-50%); }
+.spark::after  { top: 50%; left: 0; height: 1.5px; width: 100%; transform: translateY(-50%); }
+
+/* ============================================================= */
+/*  Keyframes                                                     */
+/* ============================================================= */
+@keyframes dotPulse {
+  0%, 100% { transform: scale(1);    opacity: 1; }
+  50%      { transform: scale(1.35); opacity: .8; }
+}
+@keyframes twinkle {
+  0%, 100% { opacity: .25; }
+  50%      { opacity: 1; }
+}
+@keyframes floatY {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-10px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; }
 }
