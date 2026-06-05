@@ -1,25 +1,24 @@
 import Link from "next/link";
 
 const NAV_LINKS = [
-  "Home",
-  "Leistungen",
-  "Webdesign",
-  "SEO-Optimierung",
-  "Portfolio",
-  "Prozess",
-  "Preise",
-  "Über uns",
-  "FAQ",
-  "Kontakt",
+  { label: "Home", href: "/" },
+  { label: "Leistungen", href: "#leistungen" },
+  { label: "Webdesign", href: "#leistungen" },
+  { label: "SEO-Optimierung", href: "#leistungen" },
+  { label: "Referenzen", href: "#referenzen" },
+  { label: "Über uns", href: "#ueber-uns" },
+  { label: "Preise", href: "#kontakt" },
+  { label: "FAQ", href: "#faq" },
+  { label: "Kontakt", href: "#kontakt" },
 ];
 
 const SERVICES = [
-  "Webdesign für Handwerk",
-  "Webdesign für Arztpraxen",
-  "Webdesign für Gastronomie",
-  "Webdesign für Coaches",
-  "Webdesign für Kanzleien",
-  "Webdesign für Agenturen",
+  { label: "Webdesign für Handwerk", href: "#kontakt" },
+  { label: "Webdesign für Arztpraxen", href: "#kontakt" },
+  { label: "Webdesign für Gastronomie", href: "#kontakt" },
+  { label: "Webdesign für Coaches", href: "#kontakt" },
+  { label: "Webdesign für Kanzleien", href: "#kontakt" },
+  { label: "Webdesign für Agenturen", href: "#kontakt" },
 ];
 
 function IconLinkedIn() {
@@ -106,12 +105,12 @@ export default function FooterSection() {
             </h3>
             <ul className="space-y-3">
               {NAV_LINKS.map((link) => (
-                <li key={link}>
+                <li key={link.label}>
                   <a
-                    href="#"
+                    href={link.href}
                     className="text-[14px] text-white/55 transition-colors duration-150 hover:text-white/90"
                   >
-                    {link}
+                    {link.label}
                   </a>
                 </li>
               ))}
@@ -125,12 +124,12 @@ export default function FooterSection() {
             </h3>
             <ul className="space-y-3">
               {SERVICES.map((s) => (
-                <li key={s}>
+                <li key={s.label}>
                   <a
-                    href="#"
+                    href={s.href}
                     className="text-[14px] text-white/55 transition-colors duration-150 hover:text-white/90"
                   >
-                    {s}
+                    {s.label}
                   </a>
                 </li>
               ))}
@@ -158,7 +157,7 @@ export default function FooterSection() {
                 <svg width="15" height="15" viewBox="0 0 16 16" fill="none" className="flex-none text-white/30">
                   <path d="M2 3.5A1.5 1.5 0 013.5 2h.879a1 1 0 01.95.685l.826 2.479a1 1 0 01-.23 1.032L4.5 7.5c.974 1.628 2.372 3.026 4 4l1.304-1.425a1 1 0 011.032-.23l2.479.826A1 1 0 0114 11.621V12.5A1.5 1.5 0 0112.5 14C6.701 14 2 9.299 2 3.5z" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
-                01723 465896
+                0172 3465896
               </li>
               <li className="flex items-center gap-3 text-[14px] text-white/55">
                 <svg width="15" height="15" viewBox="0 0 16 16" fill="none" className="flex-none text-white/30">

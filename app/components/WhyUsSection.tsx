@@ -13,6 +13,7 @@ const POINTS = [
 export default function WhyUsSection() {
   return (
     <section
+      id="ueber-uns"
       className="relative w-full overflow-hidden py-24 md:py-32"
       style={{
         background:

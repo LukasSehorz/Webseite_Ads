@@ -41,6 +41,7 @@ export default function ReferencesScatter() {
 
   return (
     <section
+      id="referenzen"
       ref={sectionRef}
       className="relative w-full overflow-hidden pt-24 pb-10 md:pt-32 md:pb-16"
       style={{

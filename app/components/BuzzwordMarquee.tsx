@@ -4,7 +4,7 @@ const ITEMS = [
   "SEO-optimiert",
   "Schnelle Ladezeiten",
   "Conversion-fokussiert",
-  "100+ Projekte umgesetzt",
+  "40+ Projekte umgesetzt",
   "Persönlicher Ansprechpartner",
   "DSGVO-konform",
   "KI-Suchoptimierung",

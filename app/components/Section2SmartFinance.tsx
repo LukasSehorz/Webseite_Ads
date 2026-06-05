@@ -85,7 +85,7 @@ export default function Section2SmartFinance() {
               </svg>
             </a>
             <a
-              href="tel:+4901723465896"
+              href="tel:+491723465896"
               className="inline-flex w-full items-center justify-center gap-2.5 rounded-full border border-white/20 bg-white/[0.06] px-9 py-5 text-[18px] font-medium text-white/90 backdrop-blur-sm transition-all duration-200 hover:border-white/35 hover:bg-white/[0.1] hover:text-white active:scale-95"
             >
               <svg width="19" height="19" viewBox="0 0 16 16" fill="none">

@@ -118,7 +118,7 @@ export default function Datenschutz() {
           <br />
           84539 Zangberg
           <br />
-          Telefon: <a href="tel:+4901723465896">01723 465896</a>
+          Telefon: <a href="tel:+491723465896">0172 3465896</a>
           <br />
           E-Mail:{" "}
           <a href="mailto:Lukas.sehorz@flowstate-ai.net">

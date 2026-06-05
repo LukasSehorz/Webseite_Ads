@@ -194,7 +194,7 @@ export default function Testimonials() {
       <div className="relative z-10 mt-12 flex flex-col items-center gap-2">
         <Stars />
         <p className="text-[14px] text-white/55">
-          <span className="font-medium text-white">4,9/5</span> — bewertet von 4.900+ Kunden
+          <span className="font-medium text-white">4,9/5</span> — bewertet von 40+ Kunden
         </p>
       </div>
 

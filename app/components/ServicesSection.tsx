@@ -39,6 +39,7 @@ const SERVICES: Service[] = [
 export default function ServicesSection() {
   return (
     <section
+      id="leistungen"
       className="relative w-full overflow-hidden py-24 md:py-32"
       style={{
         background:
