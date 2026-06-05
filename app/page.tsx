@@ -1,3 +1,4 @@
+import Navbar from "./components/Navbar";
 import HeroPortrait from "./components/HeroPortrait";
 import Section2SmartFinance from "./components/Section2SmartFinance";
 import ReferencesScatter from "./components/ReferencesScatter";
@@ -14,6 +15,7 @@ import FooterSection from "./components/FooterSection";
 export default function Home() {
   return (
     <main className="flex flex-col">
+      <Navbar />
       <HeroPortrait />
       <Section2SmartFinance />
       <ReferencesScatter />

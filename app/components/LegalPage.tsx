@@ -1,6 +1,5 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
-import { Logo } from "./ui";
 import FooterSection from "./FooterSection";
 
 export default function LegalPage({
@@ -17,8 +16,8 @@ export default function LegalPage({
       {/* Top bar */}
       <header className="sticky top-0 z-40 border-b border-white/[0.07] bg-[#060910]/80 backdrop-blur-md">
         <div className="mx-auto flex max-w-3xl items-center justify-between px-6 py-5">
-          <Link href="/" aria-label="Zur Startseite">
-            <Logo />
+          <Link href="/" aria-label="Zur Startseite" className="flex items-center gap-2.5 text-white no-underline">
+            <img src="/logo.png" alt="Flowstate AI Logo" width={36} height={36} className="h-9 w-9 rounded-md" />
           </Link>
           <Link
             href="/"
