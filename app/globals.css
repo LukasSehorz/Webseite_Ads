@@ -82,6 +82,101 @@ body {
   flex: none;
 }
 
+/* Continuously scrolling buzzword marquee (Section 2 footer strip) */
+@keyframes marquee-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 38s linear infinite;
+}
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+.marquee-mask {
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+}
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track { animation: none; }
+}
+
+/* Legal pages (Impressum / Datenschutz) typography */
+.legal-prose h2 {
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: #eef3fb;
+  margin-top: 8px;
+  margin-bottom: 16px;
+}
+.legal-prose h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #d6e0ee;
+  margin-top: 24px;
+  margin-bottom: 8px;
+}
+.legal-prose p {
+  font-size: 15px;
+  line-height: 1.75;
+  color: rgba(255, 255, 255, .55);
+}
+.legal-prose p + p {
+  margin-top: 12px;
+}
+.legal-prose strong {
+  color: #eef3fb;
+  font-weight: 600;
+}
+.legal-prose a {
+  color: #88c1ed;
+  text-decoration: none;
+  transition: color .2s;
+}
+.legal-prose a:hover {
+  color: #aed4f2;
+  text-decoration: underline;
+}
+.legal-prose ul {
+  margin-top: 12px;
+  padding-left: 0;
+  list-style: none;
+}
+.legal-prose ul li {
+  position: relative;
+  padding-left: 20px;
+  font-size: 15px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, .55);
+  margin-top: 8px;
+}
+.legal-prose ul li::before {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 11px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #4686b7;
+}
+.legal-prose .addr {
+  font-size: 15px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, .72);
+}
+.legal-prose section {
+  border-top: 1px solid rgba(255, 255, 255, .07);
+  padding-top: 28px;
+}
+.legal-prose section:first-child {
+  border-top: none;
+  padding-top: 0;
+}
+
 /* Light translucent pill variant (section 2 button) */
 .glass-pill--light {
   background: linear-gradient(180deg, rgba(20, 28, 40, .55), rgba(12, 18, 28, .5));

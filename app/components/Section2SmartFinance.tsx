@@ -1,4 +1,15 @@
-import { ArrowButton, Spark } from "./ui";
+import { IconCheck } from "./icons";
+import BuzzwordMarquee from "./BuzzwordMarquee";
+
+const BENEFITS = [
+  "7–14 Tage bis zum Launch",
+  "3× mehr Anfragen im Schnitt",
+  "Optimiert auf Kunden- oder Mitarbeitergewinnung",
+  "Individuell entwickelt – kein Baukasten",
+  "Conversion-Texte & Inhalte inklusive",
+  "Eigene KI-Bildwelt statt Stockfotos",
+  "Langfristiger Support nach Projektabschluss",
+];
 
 export default function Section2SmartFinance() {
   return (
@@ -47,52 +58,79 @@ export default function Section2SmartFinance() {
         {/* faint ring */}
         <span className="absolute left-[20%] top-[8%] z-[2] h-64 w-64 rounded-full border border-white/15" />
 
-        {/* subtle grid lines + sparkles */}
-        <span className="absolute left-[66%] top-0 z-[2] h-[93%] w-px bg-white/10" />
-        <span className="absolute left-0 top-[74%] z-[2] h-px w-full bg-white/10" />
-        <Spark className="absolute left-[66%] top-[24%] z-[3] -translate-x-1/2 opacity-70" />
-        <Spark className="absolute left-[66%] top-[74%] z-[3] -translate-x-1/2 -translate-y-1/2 opacity-70" />
+        {/* Headlines + CTAs */}
+        <div className="absolute left-[42%] top-[21%] z-10 w-[620px] max-w-[48vw] text-center">
+          {/* Haupt-Headline */}
+          <h1 className="whitespace-nowrap font-semibold leading-[0.98] tracking-tight text-white"
+              style={{ fontSize: "clamp(38px, 5.2vw, 76px)" }}>
+            Webdesign-Agentur
+          </h1>
 
-        {/* Heading */}
-        <h2 className="absolute left-[42%] top-[14%] z-10 font-semibold leading-[0.98] tracking-tight"
-            style={{ fontSize: "clamp(40px, 6.4vw, 92px)" }}>
-          <span className="text-white/45">Modernes</span> <span className="text-white">Webdesign</span><br />
-          <span className="text-white/45">für mehr</span><br />
-          <span className="text-white">Wachstum</span>
-        </h2>
+          {/* Zweite Headline (kleiner) */}
+          <h2 className="mt-8 font-medium leading-[1.25] tracking-tight"
+              style={{ fontSize: "clamp(20px, 2.6vw, 38px)" }}>
+            <span className="text-white/45">Modernes Webdesign für mehr</span><br />
+            <span className="text-white/45">Sichtbarkeit, Anfragen &amp; Wachstum</span>
+          </h2>
 
-        {/* Subcopy */}
-        <p className="absolute left-[48%] top-[64%] z-10 max-w-[300px] text-[15px] leading-relaxed text-[#dbe5f2]">
-          Wir gestalten schnelle, KI-optimierte<br />
-          Websites, die Kunden und Bewerber<br />
-          überzeugen.
-        </p>
-
-        {/* View platform button */}
-        <div className="absolute bottom-[14%] right-[7%] z-10">
-          <ArrowButton label="Projekte ansehen" light />
+          {/* CTAs zentriert darunter */}
+          <div className="mx-auto mt-14 flex w-[360px] flex-col gap-4">
+            <a
+              href="#kontakt"
+              className="inline-flex w-full items-center justify-center gap-2.5 rounded-full bg-[#4686B7] px-9 py-5 text-[18px] font-semibold text-white shadow-[0_0_30px_rgba(70,134,183,.35)] transition-all duration-200 hover:bg-[#5a9acc] hover:shadow-[0_0_40px_rgba(70,134,183,.5)] active:scale-95"
+            >
+              Erstgespräch vereinbaren
+              <svg width="19" height="19" viewBox="0 0 16 16" fill="none">
+                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </a>
+            <a
+              href="tel:+4901723465896"
+              className="inline-flex w-full items-center justify-center gap-2.5 rounded-full border border-white/20 bg-white/[0.06] px-9 py-5 text-[18px] font-medium text-white/90 backdrop-blur-sm transition-all duration-200 hover:border-white/35 hover:bg-white/[0.1] hover:text-white active:scale-95"
+            >
+              <svg width="19" height="19" viewBox="0 0 16 16" fill="none">
+                <path d="M2 3.5A1.5 1.5 0 013.5 2h.879a1 1 0 01.95.685l.826 2.479a1 1 0 01-.23 1.032L4.5 7.5c.974 1.628 2.372 3.026 4 4l1.304-1.425a1 1 0 011.032-.23l2.479.826A1 1 0 0114 11.621V12.5A1.5 1.5 0 0112.5 14C6.701 14 2 9.299 2 3.5z" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+              Jetzt anrufen
+            </a>
+          </div>
         </div>
 
-        {/* Performance glass card */}
-        <div className="absolute left-[11%] top-[38%] z-10 w-[20%] min-w-[230px] -translate-y-1/2 rounded-[26px] border border-white/20 bg-white/10 p-6 backdrop-blur-md shadow-[0_30px_60px_rgba(0,0,0,.35)]">
-          <div className="flex items-center gap-3">
-            <span className="h-7 w-7 rounded-full bg-white shadow-[0_0_10px_rgba(255,255,255,.5)]" />
-            <span className="text-[18px] text-white">Sichtbarkeit</span>
+        {/* Stats / Benefits glass card */}
+        <div className="absolute left-[8%] top-[49%] z-10 w-[24%] min-w-[300px] max-w-[360px] -translate-y-1/2 rounded-[26px] border border-white/15 bg-white/[0.08] p-7 shadow-[0_30px_70px_rgba(0,0,0,.4)] ring-1 ring-white/5 backdrop-blur-md">
+          {/* Heading */}
+          <div
+            className="text-[44px] font-semibold leading-none tracking-tight"
+            style={{
+              backgroundImage: "linear-gradient(180deg,#ffffff,#aacdf0)",
+              WebkitBackgroundClip: "text",
+              backgroundClip: "text",
+              color: "transparent",
+            }}
+          >
+            +40
           </div>
-          <svg viewBox="0 0 240 110" className="mt-5 w-full" fill="none">
-            <path d="M4,86 C40,80 56,40 92,46 C128,52 150,18 176,34 C200,49 218,40 236,30"
-              stroke="url(#perfLine)" strokeWidth={3} strokeLinecap="round" />
-            <defs>
-              <linearGradient id="perfLine" x1="0" y1="0" x2="1" y2="0">
-                <stop offset="0%" stopColor="#9fc36a" />
-                <stop offset="100%" stopColor="#e6e36a" />
-              </linearGradient>
-            </defs>
-          </svg>
-          <div className="mt-4">
-            <div className="text-[26px] font-medium text-white">+240%</div>
-            <div className="text-[13px] text-white/60">in KI-Suchen</div>
-          </div>
+          <p className="mt-2 text-[15px] font-medium text-white/70">umgesetzte Projekte</p>
+
+          {/* divider */}
+          <div className="my-4 h-px w-full bg-white/10" />
+
+          {/* benefits */}
+          <ul className="space-y-[26px]">
+            {BENEFITS.map((b) => (
+              <li key={b} className="flex items-start gap-3.5">
+                <span className="mt-0.5 flex h-[25px] w-[25px] flex-none items-center justify-center rounded-full bg-[#88C1ED]/15 text-[#88C1ED]">
+                  <IconCheck className="h-4 w-4" />
+                </span>
+                <span className="text-[16.5px] leading-snug text-white/80">{b}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Durchlaufendes Buzzword-Banner – liegt im Bild auf dem Schreibtisch */}
+        <div className="absolute inset-x-0 bottom-[2.5%] z-10">
+          <BuzzwordMarquee />
         </div>
       </div>
     </section>

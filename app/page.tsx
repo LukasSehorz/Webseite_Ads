@@ -6,7 +6,7 @@ import ServicesSection from "./components/ServicesSection";
 import WhyUsSection from "./components/WhyUsSection";
 import ComparisonSection from "./components/ComparisonSection";
 import IncludedSection from "./components/IncludedSection";
-import Section4Roadmap from "./components/Section4Roadmap";
+import ContactForm from "./components/ContactForm";
 import FAQSection from "./components/FAQSection";
 import CTASection from "./components/CTASection";
 import FooterSection from "./components/FooterSection";
@@ -22,7 +22,7 @@ export default function Home() {
       <WhyUsSection />
       <ComparisonSection />
       <IncludedSection />
-      <Section4Roadmap />
+      <ContactForm />
       <FAQSection />
       <CTASection />
       <FooterSection />

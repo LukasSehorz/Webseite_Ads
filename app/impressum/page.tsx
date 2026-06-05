@@ -1,0 +1,146 @@
+import type { Metadata } from "next";
+import LegalPage from "../components/LegalPage";
+
+export const metadata: Metadata = {
+  title: "Impressum — Flowstate AI Solutions",
+  description: "Impressum und Anbieterkennzeichnung der Flowstate AI Solutions GbR.",
+};
+
+export default function Impressum() {
+  return (
+    <LegalPage title="Impressum" updated="Juni 2026">
+      <section>
+        <h2>Angaben gemäß § 5 DDG</h2>
+        <p className="addr">
+          <strong>Flowstate AI Solutions</strong>
+          <br />
+          Sehorz Lukas, vom Hofe Jannik GbR
+          <br />
+          Am Anger 3
+          <br />
+          84539 Zangberg
+          <br />
+          Deutschland
+        </p>
+      </section>
+
+      <section>
+        <h2>Vertretungsberechtigte Gesellschafter</h2>
+        <p className="addr">
+          Lukas Sehorz
+          <br />
+          Jannik vom Hofe
+        </p>
+      </section>
+
+      <section>
+        <h2>Kontakt</h2>
+        <p className="addr">
+          Telefon: <a href="tel:+4901723465896">01723 465896</a>
+          <br />
+          E-Mail:{" "}
+          <a href="mailto:Lukas.sehorz@flowstate-ai.net">
+            Lukas.sehorz@flowstate-ai.net
+          </a>
+        </p>
+        <p>Erreichbarkeit: Montag bis Sonntag, 8:00 – 21:00 Uhr</p>
+      </section>
+
+      <section>
+        <h2>Umsatzsteuer-Identifikationsnummer</h2>
+        <p>
+          Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:
+          {" "}
+          <em>auf Anfrage</em>.
+        </p>
+      </section>
+
+      <section>
+        <h2>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h2>
+        <p className="addr">
+          Lukas Sehorz &amp; Jannik vom Hofe
+          <br />
+          c/o Flowstate AI Solutions GbR
+          <br />
+          Am Anger 3
+          <br />
+          84539 Zangberg
+        </p>
+      </section>
+
+      <section>
+        <h2>Haftungsausschluss</h2>
+
+        <h3>Haftung für Inhalte</h3>
+        <p>
+          Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für
+          die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir
+          jedoch keine Gewähr übernehmen. Als Diensteanbieter sind wir gemäß § 7
+          Abs. 1 DDG für eigene Inhalte auf diesen Seiten nach den allgemeinen
+          Gesetzen verantwortlich. Nach §§ 8 bis 10 DDG sind wir als
+          Diensteanbieter jedoch nicht verpflichtet, übermittelte oder
+          gespeicherte fremde Informationen zu überwachen oder nach Umständen zu
+          forschen, die auf eine rechtswidrige Tätigkeit hinweisen.
+        </p>
+        <p>
+          Verpflichtungen zur Entfernung oder Sperrung der Nutzung von
+          Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt.
+          Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der
+          Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden
+          von entsprechenden Rechtsverletzungen werden wir diese Inhalte
+          umgehend entfernen.
+        </p>
+
+        <h3>Haftung für Links</h3>
+        <p>
+          Unser Angebot enthält Links zu externen Webseiten Dritter, auf deren
+          Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden
+          Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten
+          Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten
+          verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der
+          Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte
+          waren zum Zeitpunkt der Verlinkung nicht erkennbar. Eine permanente
+          inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete
+          Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden
+          von Rechtsverletzungen werden wir derartige Links umgehend entfernen.
+        </p>
+      </section>
+
+      <section>
+        <h2>Urheberrecht</h2>
+        <p>
+          Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen
+          Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung,
+          Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der
+          Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des
+          jeweiligen Autors bzw. Erstellers. Downloads und Kopien dieser Seite
+          sind nur für den privaten, nicht kommerziellen Gebrauch gestattet.
+          Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt
+          wurden, werden die Urheberrechte Dritter beachtet. Insbesondere werden
+          Inhalte Dritter als solche gekennzeichnet. Sollten Sie trotzdem auf
+          eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen
+          entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen werden
+          wir derartige Inhalte umgehend entfernen.
+        </p>
+      </section>
+
+      <section>
+        <h2>Streitschlichtung</h2>
+        <p>
+          Die Europäische Kommission stellt eine Plattform zur
+          Online-Streitbeilegung (OS) bereit:{" "}
+          <a
+            href="https://ec.europa.eu/consumers/odr/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            https://ec.europa.eu/consumers/odr/
+          </a>
+          . Unsere E-Mail-Adresse finden Sie oben im Impressum. Wir sind nicht
+          bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer
+          Verbraucherschlichtungsstelle teilzunehmen.
+        </p>
+      </section>
+    </LegalPage>
+  );
+}

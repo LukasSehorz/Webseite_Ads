@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const NAV_LINKS = [
   "Home",
   "Leistungen",
@@ -150,20 +152,20 @@ export default function FooterSection() {
                 <svg width="15" height="15" viewBox="0 0 16 16" fill="none" className="flex-none text-white/30">
                   <path d="M2 4l6 4.5L14 4M2 3h12a1 1 0 011 1v8a1 1 0 01-1 1H2a1 1 0 01-1-1V4a1 1 0 011-1z" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" />
                 </svg>
-                kontakt@flowstate-ai.de
+                Lukas.sehorz@flowstate-ai.net
               </li>
               <li className="flex items-center gap-3 text-[14px] text-white/55">
                 <svg width="15" height="15" viewBox="0 0 16 16" fill="none" className="flex-none text-white/30">
                   <path d="M2 3.5A1.5 1.5 0 013.5 2h.879a1 1 0 01.95.685l.826 2.479a1 1 0 01-.23 1.032L4.5 7.5c.974 1.628 2.372 3.026 4 4l1.304-1.425a1 1 0 011.032-.23l2.479.826A1 1 0 0114 11.621V12.5A1.5 1.5 0 0112.5 14C6.701 14 2 9.299 2 3.5z" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
-                0178 5641640
+                01723 465896
               </li>
               <li className="flex items-center gap-3 text-[14px] text-white/55">
                 <svg width="15" height="15" viewBox="0 0 16 16" fill="none" className="flex-none text-white/30">
                   <path d="M8 1.5a5 5 0 100 10A5 5 0 008 1.5zM0 6.5a8 8 0 1116 0 8 8 0 01-16 0z" stroke="currentColor" strokeWidth="1.1" />
                   <path d="M8 4v3l2 1" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" />
                 </svg>
-                Mo – Sa: 9:00 – 21:00 Uhr
+                Mo – So: 8:00 – 21:00 Uhr
               </li>
               <li className="flex items-start gap-3 text-[14px] text-white/55">
                 <svg width="15" height="15" viewBox="0 0 16 16" fill="none" className="mt-0.5 flex-none text-white/30">
@@ -193,8 +195,8 @@ export default function FooterSection() {
           © 2025 Flowstate AI Solutions. Alle Rechte vorbehalten.
         </p>
         <div className="flex gap-6">
-          <a href="#" className="text-[13px] text-white/30 transition-colors hover:text-white/60">Impressum</a>
-          <a href="#" className="text-[13px] text-white/30 transition-colors hover:text-white/60">Datenschutz</a>
+          <Link href="/impressum" className="text-[13px] text-white/30 transition-colors hover:text-white/60">Impressum</Link>
+          <Link href="/datenschutz" className="text-[13px] text-white/30 transition-colors hover:text-white/60">Datenschutz</Link>
         </div>
       </div>
 
