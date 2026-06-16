@@ -73,7 +73,7 @@ export default function FooterSection() {
 
             <div className="mt-6 flex gap-3">
               <a
-                href="https://www.instagram.com/flowstate_ai_solutions/"
+                href="https://www.instagram.com/jannik_vomhofe/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex h-9 w-9 items-center justify-center rounded-xl border border-white/10 bg-white/[0.04] text-white/45 transition-all duration-200 hover:border-white/20 hover:bg-white/[0.08] hover:text-white/80"

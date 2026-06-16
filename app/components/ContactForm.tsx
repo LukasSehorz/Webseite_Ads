@@ -363,7 +363,7 @@ export default function ContactForm() {
             Jetzt Erstgespräch vereinbaren
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-[16px] text-white/50">
-            Erzählen Sie mir von Ihrem Projekt – das Gespräch ist kostenlos und unverbindlich.
+            Erzählen Sie uns von Ihrem Projekt – das Gespräch ist kostenlos und unverbindlich.
           </p>
         </motion.header>
 
@@ -397,7 +397,7 @@ export default function ContactForm() {
               </span>
               <h4 className="text-2xl font-bold text-white">Vielen Dank!</h4>
               <p className="mt-3 max-w-sm text-[15px] leading-relaxed text-white/55">
-                Ihre Anfrage ist eingegangen. Ich melde mich innerhalb von 24 Stunden persönlich bei Ihnen.
+                Ihre Anfrage ist eingegangen. Wir melden uns innerhalb von 24 Stunden persönlich bei Ihnen.
               </p>
             </motion.div>
           ) : (
@@ -483,7 +483,7 @@ export default function ContactForm() {
                           <Select value={data.budget} onChange={(v) => set("budget", v)} options={BUDGET} />
                         </Field>
                       </div>
-                      <Field label="Gibt es noch etwas Wichtiges, das ich vorab wissen sollte?">
+                      <Field label="Gibt es noch etwas Wichtiges, das wir vorab wissen sollten?">
                         <textarea
                           rows={4}
                           className={inputCls + " resize-none"}
@@ -551,7 +551,7 @@ export default function ContactForm() {
 
               {step === STEPS.length - 1 && (
                 <p className="mt-6 text-center text-[13px] text-white/35">
-                  Ich melde mich innerhalb von 24 Stunden persönlich bei Ihnen.
+                  Wir melden uns innerhalb von 24 Stunden persönlich bei Ihnen.
                 </p>
               )}
             </>

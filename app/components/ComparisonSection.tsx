@@ -29,11 +29,11 @@ export default function ComparisonSection() {
         {/* Header */}
         <header className="mx-auto mb-14 max-w-2xl text-center md:mb-20">
           <h2 className="text-4xl font-medium leading-tight tracking-tight text-white md:text-5xl">
-            <span className="text-white/45">Standard-Agenturen</span> vs. Mein Ansatz
+            <span className="text-white/45">Standard-Agenturen</span> vs. Unser Ansatz
           </h2>
           <p className="mt-5 text-[16px] leading-relaxed text-white/50">
             Viele Agenturen liefern Websites, die gut aussehen – aber nicht funktionieren.
-            Ich mache das anders.
+            Wir machen das anders.
           </p>
         </header>
 
@@ -53,9 +53,9 @@ export default function ComparisonSection() {
             </ul>
           </div>
 
-          {/* Mein Ansatz (hervorgehoben) */}
+          {/* Unser Ansatz (hervorgehoben) */}
           <div className="relative rounded-3xl border border-[#88C1ED]/25 bg-[#4686B7]/[0.06] p-8 shadow-[0_30px_70px_rgba(0,0,0,.4)] ring-1 ring-[#88C1ED]/10 md:p-10">
-            <h3 className="text-xl font-medium tracking-tight text-white">Mein Ansatz</h3>
+            <h3 className="text-xl font-medium tracking-tight text-white">Unser Ansatz</h3>
             <ul className="mt-7 space-y-5">
               {OURS.map((item) => (
                 <li key={item} className="flex items-center gap-4">
