@@ -1,14 +1,17 @@
 import { IconCheckCircle } from "./icons";
 
 const ITEMS = [
+  "Webdesign",
   "SEO-optimiert",
-  "Schnelle Ladezeiten",
-  "Conversion-fokussiert",
-  "40+ Projekte umgesetzt",
+  "Meta & Google Ads",
+  "LinkedIn Ads",
+  "Leadgenerierung",
+  "Mitarbeitergewinnung",
+  "KI-Automatisierung",
+  "Voice Agents",
+  "Corporate LLMs",
   "Persönlicher Ansprechpartner",
   "DSGVO-konform",
-  "KI-Suchoptimierung",
-  "Mobile-First",
 ];
 
 function Group({ ariaHidden = false }: { ariaHidden?: boolean }) {

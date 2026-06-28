@@ -25,7 +25,7 @@ const REVIEWS: Review[] = [
   },
   {
     quote:
-      "Endlich eine Seite, die auch Bewerber überzeugt. Schnell, modern und von Anfang bis Ende top betreut.",
+      "Über die LinkedIn- und Meta-Kampagnen kommen endlich passende Bewerbungen rein. Schnell aufgesetzt und von Anfang bis Ende top betreut.",
     name: "Markus Fischer",
     role: "Geschäftsführer · M. Fischer Bau",
     initials: "MF",
@@ -41,7 +41,7 @@ const REVIEWS: Review[] = [
   },
   {
     quote:
-      "Von der Strategie bis zum Launch absolut professionell. Klare Empfehlung für jeden, der online wachsen will.",
+      "Die automatisierte Angebots- und Rechnungserstellung spart uns jede Woche Stunden. Von der Strategie bis zur Umsetzung absolut professionell.",
     name: "K. & M.",
     role: "Geschäftsführung · K&M Trockenbau",
     initials: "KM",

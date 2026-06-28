@@ -2,17 +2,17 @@ import { IconCheck, IconX } from "./icons";
 
 const STANDARD = [
   "Schönes Design, aber keine Strategie",
-  "SEO-Versprechen ohne Substanz",
-  "Austauschbare Ergebnisse",
+  "Ads ohne klare Zielgruppe & Zahlen",
+  "Einzellösungen ohne Zusammenspiel",
   "Lange Projektlaufzeiten",
   "Kein persönlicher Ansprechpartner",
 ];
 
 const OURS = [
-  "Erst Klarheit, dann Design",
-  "Fokus auf Conversion, nicht Optik",
-  "Persönliche Umsetzung – kein Durchlauf",
-  "Entwurf in 48h, Launch in 2–3 Wochen",
+  "Erst Klarheit, dann Umsetzung",
+  "Fokus auf messbare Leads & Effizienz",
+  "Website, Ads & KI greifen ineinander",
+  "Schnelle Umsetzung, klare Meilensteine",
   "Direkter Draht, keine Umwege",
 ];
 
@@ -32,8 +32,8 @@ export default function ComparisonSection() {
             <span className="text-white/45">Standard-Agenturen</span> vs. Unser Ansatz
           </h2>
           <p className="mt-5 text-[16px] leading-relaxed text-white/50">
-            Viele Agenturen liefern Websites, die gut aussehen – aber nicht funktionieren.
-            Wir machen das anders.
+            Viele Agenturen liefern Einzelteile, die gut aussehen – aber nicht zusammen
+            funktionieren. Wir machen das anders.
           </p>
         </header>
 

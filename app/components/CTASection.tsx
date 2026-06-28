@@ -16,10 +16,10 @@ export default function CTASection() {
 
       <div className="relative z-10 mx-auto max-w-2xl px-6 text-center">
         <h2 className="text-4xl font-bold tracking-tight text-white md:text-5xl">
-          Bereit für Ihre neue Website?
+          Bereit, digital zu wachsen?
         </h2>
         <p className="mt-5 text-[16px] text-white/50">
-          Das Erstgespräch ist kostenlos und unverbindlich.
+          Ob Website, Ads oder KI-Automatisierung – das Erstgespräch ist kostenlos und unverbindlich.
         </p>
 
         <div className="mt-10 flex flex-wrap items-center justify-center gap-4">

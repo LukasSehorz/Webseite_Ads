@@ -16,12 +16,24 @@ const FAQS = [
     a: "Ja. Die Zusammenarbeit funktioniert deutschlandweit. Briefings, Abstimmungen und Freigaben laufen komplett digital ab. Auf Wunsch sind auch persönliche Treffen möglich.",
   },
   {
+    q: "Welche Werbeanzeigen schalten Sie – und wofür?",
+    a: "Wir schalten Kampagnen auf Meta (Instagram & Facebook), Google und LinkedIn – je nachdem, wo Ihre Zielgruppe ist. Damit gewinnen wir planbar neue Kundenanfragen (Leadgenerierung) oder qualifizierte Bewerber (Mitarbeitergewinnung). Zielgruppen, Anzeigen und Budget werden laufend anhand der Zahlen optimiert, damit aus Werbebudget messbare Ergebnisse werden.",
+  },
+  {
+    q: "Was umfasst Ihre KI-Prozessautomatisierung?",
+    a: "Wir automatisieren wiederkehrende Abläufe mit KI: Voice Agents, die Anrufe annehmen und Termine vereinbaren, automatisierte Angebots- und Rechnungserstellung, KI-gestützte Buchhaltung, eigene Corporate LLMs (firmeninterne KI-Assistenten auf Basis Ihrer Daten) sowie Social-Media-Marketing. So sparen Sie Zeit und senken Kosten – ohne Qualitätsverlust.",
+  },
+  {
+    q: "Sind Ads und KI-Lösungen DSGVO-konform?",
+    a: "Ja, Datenschutz hat bei uns oberste Priorität. Sämtliche Kampagnen, Tracking-Lösungen und KI-Prozesse setzen wir DSGVO-konform um – mit sauberer Rechtsgrundlage, transparenter Datenverarbeitung und, wo möglich, mit in Europa gehosteten Lösungen.",
+  },
+  {
     q: "Ist KI-Suchoptimierung im Webdesign enthalten?",
     a: "Ja, grundlegende KI-Suchmaschinenoptimierung ist bei uns Standard. Jede Website erhält eine saubere technische Struktur, schnelle Ladezeiten, optimierte Meta-Daten und eine mobile Darstellung – alles Faktoren, die Google und KI-Suchmaschinen wie ChatGPT bewerten. Für erweiterte SEO-Strategien bieten wir separate Pakete an.",
   },
   {
     q: "Was unterscheidet Flowstate AI Solutions von anderen Agenturen?",
-    a: "Bei uns erhalten Sie einen festen Ansprechpartner statt wechselnder Projektmanager, klare Prozesse ohne Agentur-Overhead und Websites, die nicht nur gut aussehen, sondern messbare Ergebnisse bringen. Wir fokussieren uns auf Conversion-Optimierung und KI-Suchoptimierung – Ihre Website soll Besucher zu Kunden machen.",
+    a: "Bei uns erhalten Sie Webdesign, Performance-Ads und KI-Automatisierung aus einer Hand – mit einem festen Ansprechpartner statt wechselnder Projektmanager und klaren Prozessen ohne Agentur-Overhead. Statt schöner Einzelteile bauen wir ein zusammenspielendes System: eine Website, die konvertiert, Kampagnen, die Anfragen bringen, und KI, die Ihre Abläufe schlanker macht – alles auf messbare Ergebnisse ausgerichtet.",
   },
   {
     q: "Bieten Sie Wartung und Pflege nach der Fertigstellung an?",

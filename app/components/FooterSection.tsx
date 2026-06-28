@@ -3,22 +3,21 @@ import Link from "next/link";
 const NAV_LINKS = [
   { label: "Home", href: "/" },
   { label: "Leistungen", href: "#leistungen" },
-  { label: "Webdesign", href: "#leistungen" },
-  { label: "SEO-Optimierung", href: "#leistungen" },
   { label: "Referenzen", href: "#referenzen" },
   { label: "Über uns", href: "#ueber-uns" },
-  { label: "Preise", href: "#kontakt" },
   { label: "FAQ", href: "#faq" },
   { label: "Kontakt", href: "#kontakt" },
 ];
 
 const SERVICES = [
-  { label: "Webdesign für Handwerk", href: "#kontakt" },
-  { label: "Webdesign für Arztpraxen", href: "#kontakt" },
-  { label: "Webdesign für Gastronomie", href: "#kontakt" },
-  { label: "Webdesign für Coaches", href: "#kontakt" },
-  { label: "Webdesign für Kanzleien", href: "#kontakt" },
-  { label: "Webdesign für Agenturen", href: "#kontakt" },
+  { label: "Webdesign & Entwicklung", href: "#leistungen" },
+  { label: "SEO-Optimierung", href: "#leistungen" },
+  { label: "Meta & Google Ads", href: "#leistungen" },
+  { label: "LinkedIn Ads", href: "#leistungen" },
+  { label: "Leadgenerierung", href: "#leistungen" },
+  { label: "Mitarbeitergewinnung", href: "#leistungen" },
+  { label: "KI-Prozessautomatisierung", href: "#leistungen" },
+  { label: "Voice Agents & Corporate LLMs", href: "#leistungen" },
 ];
 
 function IconInstagram() {
@@ -51,8 +50,8 @@ export default function FooterSection() {
               </span>
             </div>
             <p className="text-[13.5px] leading-relaxed text-white/45">
-              KI-optimiertes Webdesign für Unternehmen – suchmaschinenoptimiert, schnell und conversionstark.
-              Euer Partner für mehr Sichtbarkeit und Anfragen.
+              Digitalagentur für Webdesign, Performance-Ads und KI-Automatisierung.
+              Euer Partner für mehr Sichtbarkeit, planbare Anfragen und schlankere Prozesse – DSGVO-konform.
             </p>
 
             <div className="mt-6 flex flex-wrap gap-2">
@@ -106,7 +105,7 @@ export default function FooterSection() {
           {/* Col 3: Services */}
           <div>
             <h3 className="mb-5 text-[11px] font-semibold uppercase tracking-widest text-white/35">
-              Branchen
+              Leistungen
             </h3>
             <ul className="space-y-3">
               {SERVICES.map((s) => (

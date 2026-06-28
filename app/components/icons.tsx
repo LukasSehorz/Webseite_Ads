@@ -107,3 +107,55 @@ export const IconArrowRight = (p: SVGProps<SVGSVGElement>) => (
     <path d="M5 12h13M13 6l6 6-6 6" />
   </svg>
 );
+
+/* Performance Marketing / Ads — Megafon */
+export const IconMegaphone = (p: SVGProps<SVGSVGElement>) => (
+  <svg {...base(p)}>
+    <path d="M3 11v2a1 1 0 0 0 1 1h2l9 4V6L6 10H4a1 1 0 0 0-1 1Z" />
+    <path d="M6 14v3a1.5 1.5 0 0 0 3 0v-1.5" />
+    <path d="M18.5 9a3.5 3.5 0 0 1 0 6" />
+  </svg>
+);
+
+/* KI / Prozessautomatisierung — Chip mit Kern */
+export const IconChip = (p: SVGProps<SVGSVGElement>) => (
+  <svg {...base(p)}>
+    <rect x="7" y="7" width="10" height="10" rx="2.5" />
+    <rect x="10.5" y="10.5" width="3" height="3" rx="0.6" />
+    <path d="M9.5 4v2M14.5 4v2M9.5 18v2M14.5 18v2M4 9.5h2M4 14.5h2M18 9.5h2M18 14.5h2" />
+  </svg>
+);
+
+/* Voice Agent — Mikrofon */
+export const IconMic = (p: SVGProps<SVGSVGElement>) => (
+  <svg {...base(p)}>
+    <rect x="9" y="3" width="6" height="11" rx="3" />
+    <path d="M6 11a6 6 0 0 0 12 0M12 17v4M9 21h6" />
+  </svg>
+);
+
+/* Material-Aufnahme vor Ort — Kamera */
+export const IconCamera = (p: SVGProps<SVGSVGElement>) => (
+  <svg {...base(p)}>
+    <path d="M4 8h3l1.5-2h7L17 8h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1Z" />
+    <circle cx="12" cy="13" r="3.2" />
+  </svg>
+);
+
+/* Mitarbeitergewinnung / Recruiting — Personen */
+export const IconUsers = (p: SVGProps<SVGSVGElement>) => (
+  <svg {...base(p)}>
+    <circle cx="9" cy="8" r="3.2" />
+    <path d="M3.5 19a5.5 5.5 0 0 1 11 0" />
+    <path d="M16 5.2a3.2 3.2 0 0 1 0 5.6M17.5 19a5.5 5.5 0 0 0-3-4.9" />
+  </svg>
+);
+
+/* Dokumente / Rechnungen */
+export const IconDocument = (p: SVGProps<SVGSVGElement>) => (
+  <svg {...base(p)}>
+    <path d="M6 3h7l5 5v13H6Z" />
+    <path d="M13 3v5h5" />
+    <path d="M9 13h6M9 16.5h6" />
+  </svg>
+);

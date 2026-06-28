@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Flowstate AI — Verkaufsstarkes Webdesign & KI-Suchoptimierung",
+  title: "Flowstate AI — Webdesign, Performance-Ads & KI-Automatisierung",
   description:
-    "Flowstate AI Solutions gestaltet verkaufsstarke, KI-suchoptimierte Websites für mehr Kunden, Bewerber und Sichtbarkeit.",
+    "Flowstate AI Solutions verbindet verkaufsstarkes Webdesign, Lead- & Mitarbeitergewinnung über Meta-, Google- & LinkedIn-Ads und DSGVO-konforme KI-Prozessautomatisierung – alles aus einer Hand.",
 };
 
 export default function RootLayout({

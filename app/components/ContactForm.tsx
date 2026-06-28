@@ -33,11 +33,20 @@ const MITARBEITER = [
   "200+ Mitarbeiter",
 ];
 
+const LEISTUNGEN = [
+  "Webdesign & Entwicklung",
+  "Performance Marketing (Meta/Google/LinkedIn Ads)",
+  "KI-Prozessautomatisierung",
+  "Noch unklar – Beratung gewünscht",
+];
+
 const HERAUSFORDERUNGEN = [
-  "Zu wenig Anfragen",
-  "Falsche Kunden",
+  "Zu wenig Anfragen / Leads",
+  "Zu wenig Bewerber",
   "Website bringt keine Ergebnisse",
   "Kaum Sichtbarkeit bei Google",
+  "Werbeanzeigen ohne Erfolg",
+  "Zu viel manueller Aufwand",
   "Schlechte Conversion",
   "Noch keine Website",
 ];
@@ -45,8 +54,9 @@ const HERAUSFORDERUNGEN = [
 const ZIELE = [
   "Mehr Anfragen / Leads",
   "Mehr Bewerber gewinnen",
+  "Werbeanzeigen schalten (Meta/Google/LinkedIn)",
+  "Prozesse mit KI automatisieren",
   "Bessere Google-Sichtbarkeit",
-  "Professioneller Auftritt",
   "Höhere Conversion-Rate",
   "Komplett neue Website",
 ];
@@ -58,14 +68,6 @@ const START = [
   "Noch unklar",
 ];
 
-const BUDGET = [
-  "Unter 2.500 €",
-  "2.500 – 5.000 €",
-  "5.000 – 10.000 €",
-  "Über 10.000 €",
-  "Noch unklar",
-];
-
 type FormData = {
   vorname: string;
   nachname: string;
@@ -74,10 +76,10 @@ type FormData = {
   unternehmen: string;
   branche: string;
   mitarbeiter: string;
+  leistungen: string[];
   herausforderungen: string[];
   hauptziel: string;
   start: string;
-  budget: string;
   nachricht: string;
 };
 
@@ -89,10 +91,10 @@ const EMPTY: FormData = {
   unternehmen: "",
   branche: "",
   mitarbeiter: "",
+  leistungen: [],
   herausforderungen: [],
   hauptziel: "",
   start: "",
-  budget: "",
   nachricht: "",
 };
 
@@ -252,6 +254,16 @@ export default function ContactForm() {
     setError("");
   };
 
+  const toggleLeistung = (label: string) => {
+    setData((d) => ({
+      ...d,
+      leistungen: d.leistungen.includes(label)
+        ? d.leistungen.filter((x) => x !== label)
+        : [...d.leistungen, label],
+    }));
+    setError("");
+  };
+
   const validateStep = (): boolean => {
     if (step === 0) {
       if (!data.vorname.trim() || !data.nachname.trim() || !data.email.trim()) {
@@ -266,6 +278,10 @@ export default function ContactForm() {
     if (step === 1) {
       if (!data.branche) {
         setError("Bitte wählen Sie Ihre Branche.");
+        return false;
+      }
+      if (data.leistungen.length === 0) {
+        setError("Bitte wählen Sie mindestens eine Leistung aus.");
         return false;
       }
       if (data.herausforderungen.length === 0) {
@@ -289,10 +305,6 @@ export default function ContactForm() {
   };
 
   const submit = async () => {
-    if (!data.budget) {
-      setError("Bitte wählen Sie einen Investitionsrahmen.");
-      return;
-    }
     if (!ACCESS_KEY) {
       setError("Formular ist noch nicht konfiguriert (Access-Key fehlt).");
       return;
@@ -314,10 +326,10 @@ export default function ContactForm() {
           Unternehmen: data.unternehmen || "—",
           Branche: data.branche,
           Mitarbeiteranzahl: data.mitarbeiter || "—",
+          "Interesse an": data.leistungen.join(", "),
           Herausforderungen: data.herausforderungen.join(", "),
           Hauptziel: data.hauptziel,
           "Geplanter Start": data.start || "—",
-          Investitionsrahmen: data.budget,
           Nachricht: data.nachricht || "—",
         }),
       });
@@ -451,6 +463,23 @@ export default function ContactForm() {
 
                       <div>
                         <span className="mb-3 block text-[14px] font-semibold text-white/85">
+                          Welche Leistung interessiert Sie? <span className="text-[#88C1ED]">*</span>{" "}
+                          <span className="font-normal text-white/40">(Mehrfachauswahl)</span>
+                        </span>
+                        <div className="grid gap-3 sm:grid-cols-2">
+                          {LEISTUNGEN.map((label) => (
+                            <CheckCard
+                              key={label}
+                              label={label}
+                              checked={data.leistungen.includes(label)}
+                              onToggle={() => toggleLeistung(label)}
+                            />
+                          ))}
+                        </div>
+                      </div>
+
+                      <div>
+                        <span className="mb-3 block text-[14px] font-semibold text-white/85">
                           Was trifft auf Sie zu? <span className="text-[#88C1ED]">*</span>{" "}
                           <span className="font-normal text-white/40">(Mehrfachauswahl)</span>
                         </span>
@@ -475,14 +504,9 @@ export default function ContactForm() {
                   {/* ── Schritt 3 ── */}
                   {step === 2 && (
                     <div className="space-y-5">
-                      <div className="grid gap-5 sm:grid-cols-2">
-                        <Field label="Geplanter Start">
-                          <Select value={data.start} onChange={(v) => set("start", v)} options={START} />
-                        </Field>
-                        <Field label="Investitionsrahmen" required>
-                          <Select value={data.budget} onChange={(v) => set("budget", v)} options={BUDGET} />
-                        </Field>
-                      </div>
+                      <Field label="Geplanter Start">
+                        <Select value={data.start} onChange={(v) => set("start", v)} options={START} />
+                      </Field>
                       <Field label="Gibt es noch etwas Wichtiges, das wir vorab wissen sollten?">
                         <textarea
                           rows={4}

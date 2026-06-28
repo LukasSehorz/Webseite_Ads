@@ -7,6 +7,8 @@ import ServicesSection from "./components/ServicesSection";
 import WhyUsSection from "./components/WhyUsSection";
 import ComparisonSection from "./components/ComparisonSection";
 import IncludedSection from "./components/IncludedSection";
+import PerformanceMarketingSection from "./components/PerformanceMarketingSection";
+import AiAutomationSection from "./components/AiAutomationSection";
 import ContactForm from "./components/ContactForm";
 import FAQSection from "./components/FAQSection";
 import CTASection from "./components/CTASection";
@@ -24,6 +26,8 @@ export default function Home() {
       <WhyUsSection />
       <ComparisonSection />
       <IncludedSection />
+      <PerformanceMarketingSection />
+      <AiAutomationSection />
       <ContactForm />
       <FAQSection />
       <CTASection />

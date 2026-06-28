@@ -2,13 +2,13 @@ import { IconCheck } from "./icons";
 import BuzzwordMarquee from "./BuzzwordMarquee";
 
 const BENEFITS = [
-  "7–14 Tage bis zum Launch",
-  "3× mehr Anfragen im Schnitt",
-  "Optimiert auf Kunden- oder Mitarbeitergewinnung",
-  "Individuell entwickelt – kein Baukasten",
-  "Conversion-Texte & Inhalte inklusive",
-  "Eigene KI-Bildwelt statt Stockfotos",
-  "Langfristiger Support nach Projektabschluss",
+  "Webdesign, das Besucher zu Kunden macht",
+  "Meta-, Google- & LinkedIn-Ads für planbare Leads",
+  "Mitarbeitergewinnung über zielgenaue Kampagnen",
+  "KI-Automatisierung für Angebote, Rechnungen & Buchhaltung",
+  "Voice Agents & Corporate LLMs für eure Prozesse",
+  "Alles aus einer Hand – ein fester Ansprechpartner",
+  "100% DSGVO-konform",
 ];
 
 export default function Section2SmartFinance() {
@@ -64,14 +64,14 @@ export default function Section2SmartFinance() {
           {/* Haupt-Headline */}
           <h1 className="whitespace-nowrap font-semibold leading-[0.98] tracking-tight text-white"
               style={{ fontSize: "clamp(38px, 5.2vw, 76px)" }}>
-            Webdesign-Agentur
+            Digitalagentur
           </h1>
 
           {/* Zweite Headline (kleiner) */}
           <h2 className="mt-8 font-medium leading-[1.25] tracking-tight"
               style={{ fontSize: "clamp(20px, 2.6vw, 38px)" }}>
-            <span className="text-white/45">Modernes Webdesign für mehr</span><br />
-            <span className="text-white/45">Sichtbarkeit, Anfragen &amp; Wachstum</span>
+            <span className="text-white/45">Webdesign, Performance-Ads &amp; KI-Automatisierung</span><br />
+            <span className="text-white/45">für mehr Anfragen, Bewerber &amp; Effizienz</span>
           </h2>
 
           {/* CTAs zentriert darunter */}
@@ -159,10 +159,10 @@ export default function Section2SmartFinance() {
           {/* Headline + Subline */}
           <div className="relative z-10">
             <h1 className="text-center text-[32px] font-semibold leading-[1.08] tracking-tight text-white">
-              Webdesign-Agentur
+              Digitalagentur
             </h1>
             <h2 className="mx-auto mt-4 max-w-[320px] text-center text-[17px] font-medium leading-[1.4] tracking-tight text-white/45">
-              Modernes Webdesign für mehr Sichtbarkeit, Anfragen &amp; Wachstum
+              Webdesign, Performance-Ads &amp; KI-Automatisierung für mehr Anfragen, Bewerber &amp; Effizienz
             </h2>
           </div>
         </div>

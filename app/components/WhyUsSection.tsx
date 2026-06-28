@@ -4,8 +4,8 @@ import { IconCheckCircle } from "./icons";
 const POINTS = [
   "Persönliche Beratung – vor Ort oder digital",
   "Keine versteckten Kosten – transparentes Angebot",
-  "Schnelle Umsetzung in 7–14 Tagen",
-  "SEO-Grundlagen in jeder Website inklusive",
+  "Website, Ads & KI-Automatisierung aus einer Hand",
+  "Messbare Ergebnisse statt schöner Versprechen",
   "100% DSGVO-konform",
   "Langfristiger Support nach Projektabschluss",
 ];
@@ -45,13 +45,14 @@ export default function WhyUsSection() {
             {/* Transparenter Glas-Kasten um die Headline (nur Mobil) */}
             <div className="relative z-10 rounded-[28px] border border-white/15 bg-white/[0.07] px-6 py-8 shadow-[0_20px_50px_rgba(0,0,0,.35)] ring-1 ring-white/10 backdrop-blur-md sm:rounded-none sm:border-0 sm:bg-transparent sm:p-0 sm:shadow-none sm:ring-0 sm:backdrop-blur-none">
               <h2 className="text-center text-[30px] font-medium leading-tight tracking-tight text-white sm:text-left sm:text-4xl md:text-5xl">
-                Webdesign-Agentur –<br />Warum mit uns arbeiten?
+                Digitalagentur –<br />Warum mit uns arbeiten?
               </h2>
             </div>
           </div>
           <p className="mt-6 max-w-xl text-[16px] leading-relaxed text-white/50">
-            Als unabhängige Webdesign-Agentur setzen wir auf direkten Kontakt statt
-            Agentur-Overhead – feste Ansprechpartner, Ergebnisse die zählen.
+            Als unabhängige Digitalagentur verbinden wir Webdesign, Performance-Ads und
+            KI-Automatisierung – direkter Kontakt statt Agentur-Overhead, feste
+            Ansprechpartner, Ergebnisse die zählen.
           </p>
 
           <ul className="mt-10 space-y-5">
